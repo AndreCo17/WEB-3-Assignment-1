@@ -1,0 +1,11 @@
+td {
+    vertical-align: middle;
+    text-align: center;
+    padding: 5px;
+    margin: 5px;
+    width: 50%;
+}
+
+button {
+    border-width: 5px;
+}

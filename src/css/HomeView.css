@@ -1,0 +1,65 @@
+.homeview-container {
+    background-image: url('../images/hero-image.jpg');
+    background-size:cover;
+    background-position-y: 35%;
+    background-position-x: 20%;
+    background-repeat: no-repeat;
+
+    font-family: cursive;
+    height: 100vh;
+}
+
+.input-fields {
+    background-color: rgba(194, 194, 214, .5);
+
+    border: grey;
+    border-style:ridge;
+    border-width: 4px;
+    border-radius: 1em;
+
+    text-align: center;
+
+    margin: auto;
+    width: 30%;
+    padding: 5px;
+
+    position: absolute;
+    top: 30%;
+    left: 35%;
+
+    transition: transform .2s;
+}
+
+.input-fields:hover {
+    background-color: rgba(255, 242, 204, 1.0);
+    transform: scale(1.10);
+}
+
+.filter-input {
+    padding: 5px;
+    margin: 10px;
+    display: inline-block;
+}
+
+.show-match-button, .show-all-button, button{
+    margin: 15px;
+    padding: 10px;
+}
+
+footer {
+    position: absolute;
+    left: 10px;
+    bottom: 10px;
+}
+
+  a:visited {
+    color: pink;
+    background-color: transparent;
+    text-decoration: none;
+}
+
+  a:hover {
+    color: white;
+    background-color: transparent;
+    text-decoration: underline;
+  }

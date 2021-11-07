@@ -1,0 +1,27 @@
+.filters {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    height: 850px
+}
+
+.input-content * {
+    padding: 5px;
+    margin: 10px;
+}
+.label {
+    display: block;
+}
+
+.text-input {
+    float: right;
+    width: 60%;
+    vertical-align: center;
+}
+.title {
+    width: 92.5%;
+    height: 20px;
+}
+.genre {
+    width: 92.5%;
+    height: 40px;
+}

@@ -1,0 +1,26 @@
+.header {
+    grid-column: 1 / 6;
+    grid-row: 1 / 1;
+    overflow: hidden;
+}
+
+.header-panel {
+    overflow: hidden;
+}
+.head-content {
+    background-color: rgb(0,122,176);
+}
+.logo-image {
+    width: 120px;
+    padding: .5em;
+}
+.about-button {
+    display: absolute;
+    right: 10px;
+    float: right;
+    background-color: rgb(255, 71, 111);
+    color: white;
+    border-radius: 10px;
+    border-style: none;
+    font-size: 16px;
+}

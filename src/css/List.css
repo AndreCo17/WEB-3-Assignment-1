@@ -1,0 +1,8 @@
+.list {
+    grid-column: 4 / 6;
+    grid-row: 1 / auto;
+    padding: .5em;
+    overflow: scroll;
+    height: 825px
+}
+

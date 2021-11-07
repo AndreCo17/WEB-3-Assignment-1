@@ -1,0 +1,22 @@
+.react-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 3fr;
+    grid-template-rows: 1fr 5fr;
+    background-image: url('../images/logo.gif');
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 1.5em;
+}
+.panel-header {
+    text-align: center;
+}
+
+.panels {
+    background-color: lightyellow;
+    border-style: ridge;
+    border-radius: 1em;
+    background-size: 50%;
+    margin: .5em;
+}
+button {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}

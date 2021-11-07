@@ -1,0 +1,7 @@
+.faves {
+    grid-column: 1 / 2;
+    grid-row: 2 / auto;
+    padding: .5em;
+    height: 825px
+}
+
