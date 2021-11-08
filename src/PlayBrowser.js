@@ -14,7 +14,6 @@ class PlayBrowser extends Component {
 
     updateTitleChange = (e) => {
         this.setState({title : e})
-        console.log("hi there");
     }
 
     render() {
