@@ -23,8 +23,11 @@ class PlayBrowser extends Component {
             <div className="react-container">
                 <header className="header"><Header /></header>
                 <section className="favourites section"><Favourites/></section>
-                <section className="filters section"><Filters genre={this.props.genre} play={this.props.play} title={this.updateTitleChange}/></section>
-                <section className="play-list section"><List play={this.props.play} title={this.state.title}/></section>
+                <section className="filters section"><Filters genre={this.props.genre}
+                                                            play={this.props.play}
+                                                            title={this.updateTitleChange}/></section>
+                <section className="play-list section"><List play={this.props.play}
+                                                            title={this.state.title}/></section>
             </div>
         )
     }}
