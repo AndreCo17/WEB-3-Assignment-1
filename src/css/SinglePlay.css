@@ -9,3 +9,7 @@ td {
 button {
     border-width: 5px;
 }
+
+tr td {
+    border-bottom: 1px solid rgb(214, 202, 90);
+  }
