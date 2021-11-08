@@ -15,6 +15,8 @@ class Filters extends React.Component {
         this.props.setGenre(e.target.value);
       };
 
+    console.log(changing this so I can test out the commit);
+
     filterGenres = () => {
         let genres = this.props.play.map((p) => p.genre);
         let filteredGenres = genres.filter(
