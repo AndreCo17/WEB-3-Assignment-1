@@ -1,8 +1,8 @@
 import React from "react";
-import { Router, Routes, Route, Link } from "react-router-dom"
+import { Routes, Route } from "react-router-dom"
 import HomeView from "./HomeView";
 import PlayBrowser from "./PlayBrowser";
-import About from './About.js';
+
 
 
 
@@ -10,9 +10,9 @@ class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = { play : [], title: "" }
-  //Updates the state of the title using the input made by user in its child (Filter) to be used in the List component
 
-  let updateTitleHome = (e) => {
+  //Updates the state of the title using the input made by user in its child (Filter) to be used in the List component
+  updateTitleHome = (e) => {
       this.setState({title : e})
   }
 }
@@ -21,7 +21,7 @@ class App extends React.Component {
     const url = "https://www.randyconnolly.com//funwebdev/3rd/api/shakespeare/list.php";
     const response = await fetch(url);
     const data = await response.json();
-    this.setState({ play : data, loading: false });
+    this.setState({ play : data });
     
 }
 

@@ -7,11 +7,14 @@ export default class List extends Component {
         super(props);
         this.state = {
             sortType : 'asc',
-            loading : false
+            loading : false,
+            fave : ""
         };
     }
     
-    
+    handleAddToFaveToBrowser = (e) => {
+        this.props.id(e);
+    }
     
     render() {
         //Create a shallow copy of the plays array
@@ -41,7 +44,7 @@ export default class List extends Component {
                                 return p
                             } else if ((p.title.toLowerCase().includes(this.props.title.toLowerCase()))
                                         || (p.genre == this.props.genre)
-                                        || (p.likelyDate < this.props.likelyDate)) {
+                                        ) {
                                 return p
                             }
                         }).map((p, index) => <SinglePlay id={p.id} title={p.title} filename={p.filename}

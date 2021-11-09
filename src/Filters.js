@@ -46,7 +46,7 @@ class Filters extends React.Component {
                                     type="text"
                                     name="title"
                                     placeholder="Title..."
-                                    defaultValue={this.props.beforeInput}
+                                    defaultValue={this.props.title}
                                     onChange={(e)=>{this.handleTitleSearch(e.target.value);}} />
                                 </div>
                             
@@ -75,7 +75,9 @@ class Filters extends React.Component {
                             {/* Genre selection filter */}
                             <div className="field-body">
                                 <h3 className="label">Genre</h3>
-                                    <select className="genre" onClick={(e)=>{this.handleGenreChange(e.target.value);}}>
+                                    <select className="genre"
+                                            defaultValue={this.props.genre}
+                                            onClick={(e)=>{this.handleGenreChange(e.target.value);}}>
                                         <option value="">Choose one...</option>
                                         {this.filterGenres()}
                                     </select>

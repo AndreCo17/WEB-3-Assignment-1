@@ -9,7 +9,7 @@ import './css/PlayBrowser.css'
 class PlayBrowser extends Component {
     constructor(props) {
         super(props);
-        this.state = { title: "", genre: "" , beforeInput: "", afterInput: ""}
+        this.state = { title: "", genre: "" , beforeInput: "", afterInput: "", favesList: [], fave: "", id: ""}
     }
     //Updates the state of the title using the input made by user in its child (Filter) to be used in the List component
     updateTitleChange = (e) => {
@@ -19,12 +19,21 @@ class PlayBrowser extends Component {
     updateGenreChange = (e) => {
         this.setState({genre : e})
     }
-    //Updates the before
+    //Updates the before state
     updateBefore = (e) => {
         this.setState({beforeInput : e})
     }
+    //Updates the after state
     updateAfter = (e) => {
         this.setState({afterInput : e})
+    }
+    //Updates the fave with id
+    updateFave = (e) => {
+        this.setState({fave : e})
+    }
+    //Updates the list from Favorites component
+    setFavorites = (e) => {
+        this.setState({favesList : e})
     }
 
     render() {
@@ -32,11 +41,13 @@ class PlayBrowser extends Component {
             
             <div className="react-container">
                 <header className="header"><Header /></header>
-                <section className="favourites section"><Favourites/></section>
+                <section className="favourites section"><Favourites /></section>
+                
                 <section className="filters section"><Filters play={this.props.play}
                                                             title={this.updateTitleChange}
                                                             genre={this.updateGenreChange}
                                                             likelyDate={this.updateBefore}/></section>
+
                 <section className="play-list section"><List play={this.props.play}
                                                             title={this.state.title}
                                                             genre={this.state.genre}
