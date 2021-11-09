@@ -9,9 +9,13 @@ import About from './About.js';
 class App extends React.Component {
   constructor(props) {
     super(props);
-    this.state = { play : [] };
-}
+    this.state = { play : [], title: "" }
+  //Updates the state of the title using the input made by user in its child (Filter) to be used in the List component
 
+  let updateTitleHome = (e) => {
+      this.setState({title : e})
+  }
+}
 
   async componentDidMount() {
     const url = "https://www.randyconnolly.com//funwebdev/3rd/api/shakespeare/list.php";
@@ -25,8 +29,9 @@ class App extends React.Component {
       return (
         <div>
           <Routes>
-            <Route path="/" exact element={<HomeView/>} />
-            <Route path="/browse" element={<PlayBrowser play={this.state.play}/>} />
+            <Route path="/" exact element={<HomeView title={this.updateTitleHome}/>} />
+            <Route path="/browse" element={<PlayBrowser play={this.state.play}
+                                          title={this.state.title}/>} />
           </Routes>
         </div>
       )
