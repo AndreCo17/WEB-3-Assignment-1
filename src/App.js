@@ -12,9 +12,9 @@ class App extends React.Component {
     this.state = { play : [], title: "" }
 
   //Updates the state of the title using the input made by user in its child (Filter) to be used in the List component
-  updateTitleHome = (e) => {
-      this.setState({title : e})
-  }
+  // updateTitleHome = (e) => {
+  //     this.setState({title : e})
+  // }
 }
 
   async componentDidMount() {
@@ -29,7 +29,7 @@ class App extends React.Component {
       return (
         <div>
           <Routes>
-            <Route path="/" exact element={<HomeView title={this.updateTitleHome}/>} />
+            <Route path="/" exact element={<HomeView />} />
             <Route path="/browse" element={<PlayBrowser play={this.state.play}
                                           title={this.state.title}/>} />
           </Routes>
